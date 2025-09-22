@@ -1,26 +1,37 @@
-// src/components/common/SectionHeading.jsx
-
 import React from 'react';
+import { motion } from 'framer-motion';
 
-const SectionHeading = ({ eyebrow, title, description }) => {
+const SectionHeading = ({ number, title, subtitle, className = '' }) => {
   return (
-    <div className="mb-10">
-      {eyebrow && (
-        <div className="text-sm font-semibold tracking-widest text-accent uppercase mb-2">
-          {eyebrow}
-        </div>
-      )}
-      {title && (
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-white">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className={`mb-16 ${className}`}
+    >
+      <div className="flex items-center mb-2">
+        {number && (
+          <span className="section-number font-mono text-base text-accent mr-4">
+            {number}.
+          </span>
+        )}
+        <h2 className="text-2xl md:text-3xl font-semibold text-lightest-slate section-line flex-shrink-0">
           {title}
         </h2>
+      </div>
+      {subtitle && (
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-lg text-slate mt-4 max-w-2xl"
+        >
+          {subtitle}
+        </motion.p>
       )}
-      {description && (
-        <p className="mt-3 text-base md:text-lg text-white/80 max-w-2xl">
-          {description}
-        </p>
-      )}
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,11 +1,24 @@
-// src/components/common/Section.jsx
-
 import React from 'react';
 
-const Section = ({ id, className = '', children }) => {
+const Section = ({ 
+  id, 
+  className = '', 
+  children, 
+  fullHeight = false,
+  noPadding = false 
+}) => {
+  const baseClasses = `
+    ${fullHeight ? 'min-h-screen' : 'py-20 md:py-32'} 
+    ${noPadding ? '' : 'px-6'} 
+    scroll-mt-24
+  `;
+
   return (
-    <section id={id} className={`py-16 md:py-24 scroll-mt-24 ${className}`}>
-      <div className="container mx-auto px-4 max-w-5xl">
+    <section 
+      id={id} 
+      className={`${baseClasses} ${className}`}
+    >
+      <div className="max-w-6xl mx-auto">
         {children}
       </div>
     </section>
