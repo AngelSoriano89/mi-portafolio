@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: angel-soriano-portfolio
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SITE_URL
+        fromService:
+          type: web
+          name: angel-soriano-portfolio
+          property: host
+    domains:
+      - angel-soriano-portfolio.onrender.com

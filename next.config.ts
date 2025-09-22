@@ -49,8 +49,12 @@ const nextConfig: NextConfig = {
   
   // Variables de entorno
   env: {
-    SITE_URL: process.env.SITE_URL || 'http://localhost:3000',
+    SITE_URL: process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
   },
+
+  // Configuración para Render
+  output: 'standalone',
+  trailingSlash: false,
 
   // Configuración experimental
   experimental: {

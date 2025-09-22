@@ -8,7 +8,8 @@ const MainLayout = ({
   title = 'Angel Soriano - Frontend Developer',
   description = 'Desarrollador Frontend especializado en React, Next.js y experiencias web excepcionales. Construyo interfaces modernas, accesibles y de alto rendimiento.',
   image = '/images/og-image.jpg',
-  url = 'https://angelsoriano.dev'
+  url = 'https://angelsoriano.dev',
+  chatMode = false
 }) => {
   const siteTitle = title.includes('Angel Soriano') ? title : `${title} | Angel Soriano`;
   
@@ -49,8 +50,8 @@ const MainLayout = ({
         <meta name="revisit-after" content="7 days" />
         
         {/* Theme Colors */}
-        <meta name="theme-color" content="#0a192f" />
-        <meta name="msapplication-TileColor" content="#0a192f" />
+        <meta name="theme-color" content="#004238" />
+        <meta name="msapplication-TileColor" content="#004238" />
         
         {/* Favicons */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -98,33 +99,41 @@ const MainLayout = ({
         />
       </Head>
 
-      <div className="min-h-screen bg-navy text-slate font-sans antialiased">
-        {/* Skip to content link for accessibility */}
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-accent text-navy px-4 py-2 rounded-md font-medium z-50 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
-        >
-          Saltar al contenido principal
-        </a>
-        
-        <Header />
-        
-        <main id="main-content" className="flex-1">
+      {chatMode ? (
+        // Chat Mode Layout
+        <div className="h-screen bg-primary-900 font-sans antialiased">
           {children}
-        </main>
-        
-        <Footer />
-        
-        {/* Background decorations */}
-        <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-          {/* Subtle grid pattern */}
-          <div className="absolute inset-0 dot-grid opacity-20" />
-          
-          {/* Gradient overlays */}
-          <div className="absolute top-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
         </div>
-      </div>
+      ) : (
+        // Traditional Portfolio Layout
+        <div className="min-h-screen bg-navy text-slate font-sans antialiased">
+          {/* Skip to content link for accessibility */}
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-accent text-navy px-4 py-2 rounded-md font-medium z-50 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+          >
+            Saltar al contenido principal
+          </a>
+          
+          <Header />
+          
+          <main id="main-content" className="flex-1">
+            {children}
+          </main>
+          
+          <Footer />
+          
+          {/* Background decorations */}
+          <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+            {/* Subtle grid pattern */}
+            <div className="absolute inset-0 dot-grid opacity-20" />
+            
+            {/* Gradient overlays */}
+            <div className="absolute top-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+          </div>
+        </div>
+      )}
     </>
   );
 };

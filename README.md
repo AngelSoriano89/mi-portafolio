@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎯 Portafolio de Angel Soriano Mora
 
-## Getting Started
+Portafolio personal con interfaz conversacional tipo ChatGPT, desarrollado con Next.js y React.
 
-First, run the development server:
+## 👨‍💻 Sobre el Proyecto
+
+Este portafolio presenta una experiencia única donde los visitantes pueden "chatear" conmigo para conocer sobre mi experiencia, proyectos y habilidades como desarrollador frontend autodidacta.
+
+### ✨ Características
+
+- **Interfaz ChatGPT-style** - Experiencia conversacional intuitiva
+- **Animaciones Typewriter** - Texto que se escribe en tiempo real
+- **Diseño Responsive** - Optimizado para todos los dispositivos  
+- **Paleta Verde Personalizada** - Basada en el color #004238
+- **Información Real** - Proyectos y habilidades verificables en GitHub
+
+### 🛠️ Tecnologías Utilizadas
+
+- **Next.js 15.5.3** - Framework React de producción
+- **React 19.1.0** - Biblioteca de interfaces de usuario
+- **Tailwind CSS 4** - Framework de estilos utility-first
+- **Framer Motion** - Animaciones fluidas y transiciones
+- **TypeScript** - Tipado estático para mayor robustez
+
+### 🚀 Instalación y Desarrollo
 
 ```bash
+# Clonar el repositorio
+git clone https://github.com/AngelSoriano89/mi-portafolio.git
+
+# Instalar dependencias
+npm install
+
+# Ejecutar en desarrollo
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Construir para producción
+npm run build
+
+# Iniciar servidor de producción
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 📁 Estructura del Proyecto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├── components/
+│   ├── chat/          # Componentes de la interfaz de chat
+│   ├── layouts/       # Layouts principales
+│   └── ui/           # Componentes de UI reutilizables
+├── data/
+│   └── conversations.js  # Contenido de las conversaciones
+├── pages/            # Páginas de Next.js
+└── styles/           # Estilos globales y configuración
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+public/
+├── images/           # Imágenes y assets
+├── cv/              # Currículum en PDF
+└── favicons/        # Iconos del sitio
+```
 
-## Learn More
+### 🎨 Paleta de Colores
 
-To learn more about Next.js, take a look at the following resources:
+- **Verde Base**: #004238
+- **Verde Oscuro**: #001a17  
+- **Verde Claro**: #ccfbf1
+- **Acentos**: #2dd4bf
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📞 Contacto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Email**: angelsorianodeveloper89@gmail.com
+- **GitHub**: [AngelSoriano89](https://github.com/AngelSoriano89)
+- **LinkedIn**: [Angel Soriano](https://linkedin.com/in/angel-soriano-98353b142)
 
-## Deploy on Vercel
+### 📄 Licencia
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Este proyecto es de uso personal y está disponible como referencia para otros desarrolladores.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+**Desarrollado con ❤️ por Angel Soriano Mora - Desarrollador Frontend Autodidacta**
