@@ -41,7 +41,7 @@ const ConversationArea = ({ activeConversation, onSidebarToggle }) => {
 
   if (!currentConversation) {
     return (
-      <div className="flex-1 flex items-center justify-center bg-primary-50">
+      <div className="flex-1 flex items-center justify-center bg-secondary">
         <div className="text-center">
           <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-soft">
             <span className="text-2xl">💬</span>
@@ -58,7 +58,7 @@ const ConversationArea = ({ activeConversation, onSidebarToggle }) => {
   }
 
   return (
-    <div className="flex-1 flex flex-col bg-primary-50">
+    <div className="flex-1 flex flex-col bg-secondary">
       {/* Header */}
       <div className="bg-surface border-b border-secondary px-6 py-4">
         <div className="flex items-center justify-between">

@@ -12,7 +12,6 @@ const nextConfig = {
   },
   
   // Optimizaciones
-  swcMinify: true,
   poweredByHeader: false,
   
   // Variables de entorno
