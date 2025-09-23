@@ -5,7 +5,7 @@ services:
     plan: free
     buildCommand: |
       corepack enable
-      pnpm install --no-frozen-lockfile --prod=false
+      pnpm install --no-frozen-lockfile
       pnpm run build
     startCommand: pnpm start
     envVars:
