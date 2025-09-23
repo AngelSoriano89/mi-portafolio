@@ -38,22 +38,25 @@ devDependencies:
     specifier: ^19.1.13
     version: 19.1.13
   '@types/react-dom':
-    specifier: ^19
+    specifier: ^19.1.9
     version: 19.1.9(@types/react@19.1.13)
+  '@types/react-syntax-highlighter':
+    specifier: ^15.5.13
+    version: 15.5.13
   autoprefixer:
-    specifier: ^10.4.16
+    specifier: ^10.4.21
     version: 10.4.21(postcss@8.5.6)
   eslint:
-    specifier: ^9
+    specifier: ^9.36.0
     version: 9.36.0
   eslint-config-next:
     specifier: 15.5.3
     version: 15.5.3(eslint@9.36.0)(typescript@5.9.2)
   postcss:
-    specifier: ^8
+    specifier: ^8.5.6
     version: 8.5.6
   tailwindcss:
-    specifier: ^3.4.0
+    specifier: ^3.4.17
     version: 3.4.17
   typescript:
     specifier: ^5.9.2
@@ -643,6 +646,12 @@ packages:
     resolution: {integrity: sha512-qXRuZaOsAdXKFyOhRBg6Lqqc0yay13vN7KrIg4L7N4aaHN68ma9OK3NE1BoDFgFOTfM7zg+3/8+2n8rLUH3OKQ==}
     peerDependencies:
       '@types/react': ^19.0.0
+    dependencies:
+      '@types/react': 19.1.13
+    dev: true
+
+  /@types/react-syntax-highlighter@15.5.13:
+    resolution: {integrity: sha512-uLGJ87j6Sz8UaBAooU0T6lWJ0dBmjZgN1PZTrj05TNql2/XpC6+4HhMT5syIdFUUt+FASfCeLLv4kBygNU+8qA==}
     dependencies:
       '@types/react': 19.1.13
     dev: true

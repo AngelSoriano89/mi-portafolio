@@ -26,7 +26,6 @@ const nextConfig = {
   },
 
   // Configuración para despliegue
-  output: 'standalone',
   trailingSlash: false,
   
   // Configuración de TypeScript para builds más rápidos
