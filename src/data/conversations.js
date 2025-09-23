@@ -50,7 +50,6 @@ Como autodidacta, he desarrollado varios proyectos personales que demuestran mis
 Soy **Angel Soriano Mora**, tengo 36 años y vivo en Ecuador. Mi viaje en el desarrollo web ha sido completamente autodidacta, impulsado por la curiosidad y la pasión por crear experiencias digitales.
 
 **Mi Formación:**
-- 🎓 **Completamente autodidacta** - Aprendizaje a través de documentación, tutoriales y práctica
 - 💻 **Experiencia práctica** - desarrollando proyectos reales en GitHub
 - 📖 **Constante investigación** - de nuevas tecnologías y mejores prácticas
 - 🔬 **Experimentación continua** - con diferentes lenguajes y frameworks
