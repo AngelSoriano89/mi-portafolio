@@ -11,8 +11,9 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
   },
   
-  // Optimizaciones
+  // Optimizaciones para producción
   poweredByHeader: false,
+  compress: true,
   
   // Variables de entorno
   env: {
@@ -22,6 +23,20 @@ const nextConfig = {
   // Configuración experimental para mejor performance
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
+  },
+
+  // Configuración para despliegue
+  output: 'standalone',
+  trailingSlash: false,
+  
+  // Configuración de TypeScript para builds más rápidos
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  
+  // ESLint configuration
+  eslint: {
+    ignoreDuringBuilds: false,
   },
 };
 

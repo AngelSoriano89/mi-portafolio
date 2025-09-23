@@ -3,8 +3,11 @@ services:
     name: angel-soriano-portfolio
     env: node
     plan: free
-    buildCommand: npm install && npm run build
-    startCommand: npm start
+    buildCommand: |
+      corepack enable
+      pnpm install --frozen-lockfile
+      pnpm run build
+    startCommand: pnpm start
     envVars:
       - key: NODE_ENV
         value: production
@@ -13,5 +16,7 @@ services:
           type: web
           name: angel-soriano-portfolio
           property: host
+      - key: PNPM_VERSION
+        value: 8.15.0
     domains:
       - angel-soriano-portfolio.onrender.com
